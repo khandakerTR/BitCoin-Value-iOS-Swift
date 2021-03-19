@@ -56,7 +56,11 @@ extension ViewController : UIPickerViewDelegate{
         let selectedCurrency = coinManager.currencyArray[row]
         print("Select : \(selectedCurrency)")
         coinManager.coinPrice(for: selectedCurrency)
-        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView,
+                    rowHeightForComponent component: Int) -> CGFloat {
+        return 50
     }
     
     
